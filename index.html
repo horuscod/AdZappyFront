@@ -2551,11 +2551,7 @@
 
                 mostrarMensagemErro(1, 'Esse e-mail não é válido');
             } else {
-                messageElement.textContent = '';
-                messageElement.classList.remove("mensagemAlert");
-                email.classList.add('formInput');
-                email.classList.remove('formInputAlert');
-
+                removerMensagemErro(1)
                 if (containEmailAdvAndGov(emailEvent)) {
                     var auxEmail = true;
                     console.log('esse e-mail é de advogados')
