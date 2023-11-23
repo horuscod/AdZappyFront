@@ -724,6 +724,26 @@
             width: 284px !important;
         }
 
+        select {
+            border-radius: 46px;
+            border: 1px solid #FB6A00;
+            box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+            padding: 20px 10px 20px 15px;
+            width: 284px;
+            /* Ajuste a largura conforme necessário */
+            -webkit-appearance: none;
+            /* Remove a aparência padrão do select no Chrome e Safari */
+            -moz-appearance: none;
+            /* Remove a aparência padrão do select no Firefox */
+            appearance: none;
+            /* Remove a aparência padrão do select para outros navegadores */
+            background: url('path_to_your_dropdown_icon') no-repeat right;
+            /* Adiciona um ícone de seta para baixo */
+            background-position: right 10px center;
+            /* Ajuste a posição do ícone conforme necessário */
+            background-size: 15px;/
+        }
+
         .formInput::placeholder {
             color: #FB6A00;
             font-family: Roboto;
@@ -1440,6 +1460,10 @@
             box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
             padding: 20px 10px 20px 15px;
             color: #721c24;
+        }
+
+        option {
+            margin: 5px;
         }
     </style>
 
