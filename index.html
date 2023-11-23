@@ -2548,10 +2548,8 @@
             const messageElement = document.getElementById('message');
 
             if (containsInvalidKeyword(emailEvent)) {
-                messageElement.textContent = 'Esse e-mail não é válido!';
-                messageElement.classList.add("mensagemAlert");
-                email.classList.remove('formInput');
-                email.classList.add('formInputAlert');
+
+                mostrarMensagemErro(1, 'Esse e-mail não é válido');
             } else {
                 messageElement.textContent = '';
                 messageElement.classList.remove("mensagemAlert");
