@@ -1689,7 +1689,7 @@
 
                 /* Validação se o item está vazio */
                 if (dataInput.firstName != '' || dataInput.phone != '' || dataInput.email != '') {
-                    fetch('http://localhost:3000/leadAdZappy/leadWithTracking',
+                    fetch('https://adzappy-cogna-7f36f6f341c3.herokuapp.com/leadAdZappy/leadWithTracking',
                         {
                             method: 'POST',
                             cache: 'no-cache',
@@ -1707,9 +1707,6 @@
                 } else {
                     console.log('por favor preencha os campos')
                 }
-
-
-                alert('algo')
             } else {
 
             }
@@ -1749,7 +1746,7 @@
             const data = getDataFromInputs();
 
             console.log(data);
-            fetch('http://localhost:3000/leadAdZappy',
+            fetch('https://adzappy-cogna-7f36f6f341c3.herokuapp.com/leadAdZappy',
                 {
                     method: 'POST',
                     cache: 'no-cache',
