@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Input</title>
+</head>
+
+<body>
+    <app-custom-input _ngcontent-wpn-c109="" formcontrolname="cpf" name="cpf" tipo="cpf" required="" _nghost-wpn-c105=""
+        class="ng-invalid corVermelho-borda ng-touched ng-dirty"><input _ngcontent-wpn-c105="" type="text"
+            class="form-control corVermelho-borda" name="cpf" placeholder="999.999.999-99"><span _ngcontent-wpn-c105=""
+            class="corVermelho-borda small-text-left errorValidation errorMsg">CPF é um campo
+            obrigatório</span><!----><!----></app-custom-input>
+
+    <style>
+        /* Estilo para o contêiner do input */
+        app-custom-input {
+            position: relative;
+            display: block;
+            /* Ou inline-block, dependendo do layout desejado */
+        }
+
+        /* Estilo para o input dentro do app-custom-input */
+        app-custom-input .form-control {
+            width: 100%;
+            /* Ajuste conforme necessário */
+            /* Outros estilos para o input */
+        }
+
+        /* Estilo para a mensagem de erro */
+        app-custom-input .errorValidation {
+            position: absolute;
+            top: -20px;
+            /* Ajuste conforme necessário */
+            left: 0;
+            color: red;
+            /* Ou qualquer outra cor para o texto de erro */
+            font-size: 12px;
+            /* Ajuste o tamanho da fonte conforme necessário */
+        }
+    </style>
+</body>
+
+</html>

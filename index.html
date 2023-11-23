@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Step by step - Ambiente de Homologação</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+</head>
+
+<body>
+    <div class="contentForm">
+        <div class="formWithStepByStep">
+            <div class="formHeaderStepByStep">
+                <div class="formHeaderItensStepByStep formHeaderActiveStep">
+                    1
+                </div>
+                <div class="formHeaderItensStepByStepLine formHeaderActiveStep">
+                    .
+                </div>
+                <div class="formHeaderItensStepByStep">
+                    2
+                </div>
+                <div class="formHeaderItensStepByStepLine">
+
+                </div>
+                <div class="formHeaderItensStepByStep">
+                    3
+                </div>
+                <div class="formHeaderItensStepByStepLine">
+
+                </div>
+                <div class="formHeaderItensStepByStep">
+                    4
+                </div>
+                <div class="formHeaderItensStepByStepLine">
+
+                </div>
+                <div class="formHeaderItensStepByStep">
+                    5
+                </div>
+            </div>
+            <hr class="formLine" />
+            <div class="formBodyStepByStep">
+                <div class="formBodyItensStepByStep" id="formStep01">
+
+                    <div class="formHeaderText">
+                        Escolha seu curso
+                    </div>
+                    <div class="formHeaderDescription">
+                        Preencha o formulário para encontrar a melhor oferta para você.
+                    </div>
+
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="firstName">
+                                Nome
+                            </label>
+                            <div class="boxInput">
+                                <input type="text" id="firstName" class="formInput" placeholder="Nome"
+                                    alt="Campo para informar o Nome da pessoa" />
+
+                            </div>
+                        </div>
+                        <div class="formContentItem">
+                            <label for="email">
+                                Email
+                            </label>
+                            <div class="boxInput">
+                                <input type="email" id="email" class="formInput" placeholder="Email"
+                                    alt="Campo para informar o E-mail Principal da pessoa" />
+                                <div id="message"></div>
+                            </div>
+                        </div>
+                        <div class="formContentItem">
+                            <label for="phone">
+                                Telefone
+                            </label>
+                            <div class="boxInput">
+                                <input type="text" id="phone" class="formInput" placeholder="(DDD) 456 - 7890"
+                                    alt="Campo para informar o Nome da pessoa" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="state">
+                                Estado
+                            </label>
+                            <select id="state" class="formInput">
+                                <option value="default">Selecione seu Estado</option>
+                            </select>
+                        </div>
+                        <div class="formContentItem">
+                            <label for="city">
+                                Cidade
+                            </label>
+                            <select id="city" class="formInput">
+                                <option value="default">Cidade</option>
+                            </select>
+                        </div>
+                        <div class="formContentItem">
+                            <label for="course">
+                                Curso
+                            </label>
+                            <select id="course" class="formInput">
+                                <option value="default">Escolha seu curso</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formContentItem" id="acceptCheckBox">
+                            <input type="checkbox" id="acceptPolicy" />
+                            <label for="acceptPolicy">Aceito ser chamado por telefone, email, whatsapp e SMS pela
+                                AdZappy / Anhaguera.
+                                <br />
+                                A qualquer momento poderei solicitar a exclusão dos meus dados da lista. Leia nossa <a
+                                    href="https://www.adzappy.com/pt/pp.html"
+                                    alt="Link para política de privacidade do usuário" target="_blank">
+                                    política de privacidade para mais informações
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBodyItensStepByStep" id="formStep02">
+                    <div class="formHeaderText">
+                        Resultado para
+                    </div>
+                    <div class="formHeaderSubText">
+                        Londrina - Paraná
+                    </div>
+                    <div class="formRow">
+                        <div class="formCardOffert">
+                            <div class="formCardTypeOffertTitle">
+                                EAD
+                            </div>
+                            <div class="formCardNameCourseTitle">
+                                Arquitetura de Dados - Tecnologo
+                            </div>
+                            <div class="formCardInfosCourse">
+                                <div class="formCardInfoItem">
+                                    Tipo: Tecnólogo
+                                </div>
+                                <div class="formCardInfoItem">
+                                    Início: 2 Sem/2023
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="formContentItem">
+                                <label for="cityUnid">
+                                    Selecione uma unidade:
+                                </label>
+                                <select id="cityUnid" class="formInput">
+                                    <option value="default">Londrina/PR - Catuia</option>
+                                </select>
+                            </div>
+                            <div class="formContentItem">
+                                <label for="turnCouser">
+                                    Selecione o turno:
+                                </label>
+                                <select id="turnCouser" class="formInput">
+                                    <option value="default">Noturno</option>
+                                </select>
+                            </div>
+                            <hr />
+                            <div class="formCardValueOffert">
+                                <div class="formCardValueOfferDisccont">
+                                    <div class="textValueDiscont">
+                                        Valor da mensalidade:
+                                    </div>
+                                    <span class="valueDiscont">
+                                        R$357,64
+                                    </span>
+                                    <span class="valueDiscontPorcent">
+                                        61%
+                                    </span>
+                                </div>
+                                <div class="formCardValueOffertMain">
+                                    <span class="littleText">
+                                        R$
+                                    </span>
+                                    <span class="valueMainOffert">
+                                        139,00
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="formButtonIWantThisOffert">
+                                Quero este curso
+                            </div>
+                        </div>
+                        <div class="formCardOffert">
+                            <div class="formCardTypeOffertTitle">
+                                EAD
+                            </div>
+                            <div class="formCardNameCourseTitle">
+                                Arquitetura de Dados - Tecnologo
+                            </div>
+                            <div class="formCardInfosCourse">
+                                <div class="formCardInfoItem">
+                                    Tipo: Tecnólogo
+                                </div>
+                                <div class="formCardInfoItem">
+                                    Duração: 2 anos e 6 meses
+                                </div>
+                                <div class="formCardInfoItem">
+                                    Início: 2 Sem/2023
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="formContentItem">
+                                <label for="cityUnid">
+                                    Selecione uma unidade:
+                                </label>
+                                <select id="cityUnid" class="formInput">
+                                    <option value="default">Londrina/PR - Catuia</option>
+                                </select>
+                            </div>
+                            <div class="formContentItem">
+                                <label for="turnCouser">
+                                    Selecione o turno:
+                                </label>
+                                <select id="turnCouser" class="formInput">
+                                    <option value="default">Noturno</option>
+                                </select>
+                            </div>
+                            <hr />
+                            <div class="formCardValueOffert">
+                                <div class="formCardValueOfferDisccont">
+                                    <div class="textValueDiscont">
+                                        Valor da mensalidade:
+                                    </div>
+
+                                    <span class="valueDiscont">
+                                        R$357,64
+                                    </span>
+                                    <span class="valueDiscontPorcent">
+                                        61%
+                                    </span>
+                                </div>
+                                <div class="formCardValueOffertMain">
+                                    <span class="littleText">
+                                        R$
+                                    </span>
+                                    <span class="valueMainOffert">
+                                        139,00
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="formButtonIWantThisOffert">
+                                Quero este curso
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formButtonNewOfferts" id="newOffert">
+                            Realizar nova busca
+                        </div>
+                    </div>
+                </div>
+                <div class="formBodyItensStepByStep" id="formStep03">
+                    <div class="formRow">
+                        <span class="formHeaderText">
+                            Revise seu curso e preencha seu endereço completo
+                        </span>
+                    </div>
+                    <div class="formOfferDetails">
+                        <div class="formOfferInfoDetails">
+                            <span class="titleLabelDetails">
+                                esse é o curso escolhido
+                            </span>
+                            <div class="offerInfoCourse">
+                                <span class="titleInfoCourse">
+                                    Arquitetura de Dados - Tecnologo
+                                </span>
+                                <span class="formCardTypeOffertTitle">
+                                    EAD
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Campus: Londrina/ pr - Catuai
+                                </span>
+                                <span>
+                                    Início: 2 sem/2023
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Turno: Noturno
+                                </span>
+                                <span>
+                                    Duração: 2 anos e 6 meses
+                                </span>
+                            </div>
+                            <div class="offerChangeButton" id="newChoiseCourse">
+                                alterar dados do curso
+                            </div>
+                        </div>
+                        <div class="formOffertLineDivisor">
+
+                        </div>
+                        <div class="formOfferValueDatails">
+                            <div class="formValueInfo">
+                                <span class="labelValueInfo">
+                                    Você pagará por Mês:
+                                </span>
+                                <span class="labelLittlePrice">
+                                    R$
+                                </span>
+                                <span class="labelPrice">
+                                    148,99
+                                </span>
+                            </div>
+                            <div class="formOfferValueDiscont">
+                                Economize <span class="valueDiscount">R$6.259,90</span> até final do curso
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="cep">
+                                CEP
+                            </label>
+                            <input type="text" id="cep" class="formInput" placeholder="00000-000"
+                                alt="Campo para informar o Nome da pessoa" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="state">
+                                Estado
+                            </label>
+                            <select id="state" class="formInput">
+                                <option value="default">Estado</option>
+                            </select>
+                        </div>
+
+                        <div class="formContentItem">
+                            <label for="cityUser">
+                                Cidade
+                            </label>
+                            <select id="cityUser" class="formInput">
+                                <option value="default">Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="street">
+                                Rua
+                            </label>
+                            <input type="text" id="street" class="formInput" placeholder="Rua"
+                                alt="Campo para informar o Nome da pessoa" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="numberHouse">
+                                Número
+                            </label>
+                            <input type="text" id="numberHouse" class="formInput" placeholder="Numero"
+                                alt="Campo para informar o Nome da pessoa" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="complement">
+                                Complemento
+                            </label>
+                            <input type="text" id="complement" class="formInput" placeholder="Ex: casa, apto..."
+                                alt="Campo para informar o Nome da pessoa" />
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="formBodyItensStepByStep" id="formStep04">
+                    <div class="formHeaderText">
+                        PREENCHA SEUS DADOS PESSOAIS SEM ABREVIAÇÕES PARA CONCLUIRMOS SUA INSCRIÇÃO!
+                    </div>
+
+                    <div class="formOfferDetails">
+                        <div class="formOfferInfoDetails">
+                            <span class="titleLabelDetails">
+                                esse é o curso escolhido
+                            </span>
+                            <div class="offerInfoCourse">
+                                <span class="titleInfoCourse">
+                                    Arquitetura de Dados - Tecnologo
+                                </span>
+                                <span class="formCardTypeOffertTitle">
+                                    EAD
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Campus: Londrina/ pr - Catuai
+                                </span>
+                                <span>
+                                    Início: 2 sem/2023
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Turno: Noturno
+                                </span>
+                                <span>
+                                    Duração: 2 anos e 6 meses
+                                </span>
+                            </div>
+                            <div class="offerChangeButton" id="newChoiseCourse">
+                                alterar dados do curso
+                            </div>
+                        </div>
+                        <div class="formOffertLineDivisor">
+
+                        </div>
+                        <div class="formOfferValueDatails">
+                            <div class="formValueInfo">
+                                <span class="labelValueInfo">
+                                    Você pagará por Mês:
+                                </span>
+                                <span class="labelLittlePrice">
+                                    R$
+                                </span>
+                                <span class="labelPrice">
+                                    148,99
+                                </span>
+                            </div>
+                            <div class="formOfferValueDiscont">
+                                Economize <span class="valueDiscount">R$6.259,90</span> até final do curso
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="fullName">
+                                Nome completo sem abreviações
+                            </label>
+                            <input type="text" id="fullName" class="formInput" placeholder="Nome completo"
+                                alt="Campo para informar o Nome completo da pessoa" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="dateBorn">
+                                Data de nascimento
+                            </label>
+                            <input type="text" id="dateBorn" class="formInput" placeholder="00/00/00"
+                                alt="Campo para informar data de nascimento da pessoa" />
+                            <div id="mensagemIdade"></div>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formContentItem">
+                            <label for="dateConcluson">
+                                Ano de conclusão
+                            </label>
+                            <input type="text" id="dateConcluson" class="formInput" placeholder="0000"
+                                alt="Campo para informar data de conclusão do ensino medio" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="documentRG">
+                                Numero RG
+                            </label>
+                            <input type="text" id="documentRG" class="formInput" placeholder="RG"
+                                alt="Campo para informar numero do RG da pessoa" />
+                        </div>
+                        <div class="formContentItem">
+                            <label for="documentCPF">
+                                Numero CPF
+                            </label>
+                            <input type="text" id="documentCPF" class="formInput" placeholder="CPF"
+                                alt="Campo para informar numero do cpf da pessoa" />
+                        </div>
+                    </div>
+                </div>
+                <div class="formBodyItensStepByStep" id="formStep05">
+                    <div class="formRow">
+                        <span class="formHeaderText">
+                            REVISE SEU CURSO E ESCOLHA UMA FORMA DE INGRESSO
+                        </span>
+                    </div>
+
+                    <div class="formOfferDetails">
+                        <div class="formOfferInfoDetails">
+                            <span class="titleLabelDetails">
+                                esse é o curso escolhido
+                            </span>
+                            <div class="offerInfoCourse">
+                                <span class="titleInfoCourse">
+                                    Arquitetura de Dados - Tecnologo
+                                </span>
+                                <span class="formCardTypeOffertTitle">
+                                    EAD
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Campus: Londrina/ pr - Catuai
+                                </span>
+                                <span>
+                                    Início: 2 sem/2023
+                                </span>
+                            </div>
+                            <div class="offerInfoCourse">
+                                <span>
+                                    Turno: Noturno
+                                </span>
+                                <span>
+                                    Duração: 2 anos e 6 meses
+                                </span>
+                            </div>
+                            <div class="offerChangeButton" id="newChoiseCourse">
+                                alterar dados do curso
+                            </div>
+                        </div>
+                        <div class="formOffertLineDivisor">
+
+                        </div>
+                        <div class="formOfferValueDatails">
+                            <div class="formValueInfo">
+                                <span class="labelValueInfo">
+                                    Você pagará por Mês:
+                                </span>
+                                <span class="labelLittlePrice">
+                                    R$
+                                </span>
+                                <span class="labelPrice">
+                                    148,99
+                                </span>
+                            </div>
+                            <div class="formOfferValueDiscont">
+                                Economize <span class="valueDiscount">R$6.259,90</span> até final do curso
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow" id="lastRow">
+                        <div class="formContentItem">
+                            <label for="typeProof">
+                                Como gostaria de ingressar o curso
+                            </label>
+                            <select id="typeProof" class="formInput">
+                                <option value="default">Vestibular</option>
+                            </select>
+                        </div>
+                        <div class="formContentItem">
+                            <div class="formButtonFinish" id="createNewLead">
+                                Finalizar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="formButtonToControllStep" id="buttonNextStep">
+                        Continuar
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        /* Estilo do Desktop depois adapta para mobile - Motivo é por causa do figma feito somente em desktop até o momento  */
+        .contentForm {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 34px;
+            border: 1px solid var(#EFF0F6, #EFF0F6);
+            background: var(#fff, #FFF);
+            box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+        }
+
+        .formHeaderStepByStep {
+            max-width: 705px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 20px 0 40px 0;
+            align-items: center;
+        }
+
+        .formHeaderItensStepByStep {
+            display: flex;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            border-radius: 100%;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background: #EFF0F6;
+
+        }
+
+        .formHeaderActiveStep {
+            background-color: #93008C;
+            color: white;
+
+        }
+
+        .formHeaderItensStepByStepLine {
+            height: 5px;
+            padding: 2px;
+            width: 100px;
+            border-radius: 10px;
+            background: #EFF0F6;
+
+        }
+
+        .formHeaderItensStepByStepLineActive {
+            background-color: #93008C !important;
+        }
+
+        .formLine {
+            border: solid 1px #D9DBE9;
+            margin-bottom: 35px;
+        }
+
+        .formBodyStepByStep {
+            max-width: 990px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Step 01 formulário */
+
+        .formHeaderText {
+            color: #FB6A00;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.6px;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .formHeaderDescription {
+            color: #000;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            max-width: 372px;
+            margin: 20px auto;
+        }
+
+
+        /* Configuração de controle Step */
+
+        .formBodyItensStepByStep {
+            display: none;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stepActive {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+
+        /* Configuração do Botão CONTINUAR STEP */
+
+        .formButtonToControllStep {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.6px;
+            /* 105% */
+
+            border-radius: 40px;
+            background: #FB6A00;
+            width: 236px;
+            padding: 20px 30px;
+            text-transform: uppercase;
+        }
+
+        /* Configuração do estilo dos Inputs */
+
+        .formRow {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            width: auto;
+        }
+
+        .formContentItem {
+            display: block;
+            box-sizing: border-box;
+            margin: 0 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .formInput {
+            border-radius: 46px;
+            border: 1px solid #FB6A00;
+            box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+            padding: 20px 10px 20px 15px;
+        }
+
+        .formInput::placeholder {
+            color: #FB6A00;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .formInput:focus-visible {
+            outline: 1px solid #FB6A00;
+        }
+
+        #acceptCheckBox {
+            max-width: 570px;
+            margin: 0 auto;
+            display: flex !important;
+        }
+
+        #acceptCheckBox label {
+            color: #000;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 12.572px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25.145px;
+            /* 200% */
+            text-align: center;
+            margin: 0 0 0 40px;
+        }
+
+        /* STEP 02 */
+        #formStep02 .formHeaderSubText {
+            color: #000;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 75% */
+            margin: 20px 0;
+        }
+
+
+        .formCardOffert {
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 0.601px solid #EFF0F6;
+            background: #FFF;
+            box-shadow: 0px 3.00602px 9.61928px 0px rgba(8, 15, 52, 0.06);
+            margin: 0 25px;
+        }
+
+        .formCardTypeOffertTitle {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 24.048px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20.2px;
+            /* 84% */
+            letter-spacing: 0.962px;
+            background: #FB6A00;
+            max-width: 50px;
+            margin: 0 auto;
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        .formCardNameCourseTitle {
+            color: #000;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 24.048px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20.2px;
+            /* 84% */
+            letter-spacing: 0.962px;
+            margin: 35px 0;
+        }
+
+        .formCardInfosCourse {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 35px 0;
+        }
+
+        .formCardInfoItem {
+            color: #000;
+            font-family: Roboto;
+            font-size: 12.024px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14.429px;
+            /* 120% */
+        }
+
+        hr {
+            border: solid 1px #D9DBE9;
+            margin-bottom: 35px;
+        }
+
+        #formStep02 .formContentItem {
+            margin: 30px 0;
+        }
+
+        #formStep02 .formInput {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0;
+        }
+
+        .textValueDiscont {
+            color: #000;
+            font-family: Roboto;
+            font-size: 12.024px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14.429px;
+            /* 120% */
+            margin: 10px 0;
+        }
+
+        .formCardValueOffert {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 35px 0;
+        }
+
+        .valueDiscont {
+            color: #000;
+            font-family: Roboto;
+            font-size: 16.078px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19.294px;
+            /* 120% */
+            text-decoration: line-through;
+        }
+
+        .valueDiscontPorcent {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24.496px;
+            /* 204.131% */
+            letter-spacing: 0.48px;
+            background: #FB6A00;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .littleText {
+            color: #000;
+            text-align: right;
+            font-family: 'Anton', sans-serif;
+            font-size: 21.345px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29.883px;
+            /* 140% */
+        }
+
+        .valueMainOffert {
+            color: #000;
+            font-family: 'Anton', sans-serif;
+            font-size: 28.46px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29.883px;
+        }
+
+        .formButtonIWantThisOffert {
+            background: #FB6A00;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.6px;
+            padding: 20px 0;
+            border-radius: 35px;
+            text-transform: uppercase;
+            /* 105% */
+        }
+
+        .formButtonNewOfferts {
+            border-radius: 56px;
+            border: 1px solid #FB6A00;
+            color: #FB6A00;
+
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.6px;
+            text-transform: uppercase;
+            padding: 20px 35px;
+            /* 105% */
+        }
+
+        /* STEP 03 */
+
+
+        .formOfferDetails {
+            display: flex;
+            padding: 30px;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            border-radius: 20px;
+            border: 0.3px solid #FB6A00;
+            background: #FFF;
+            box-shadow: 0px 3.00602px 9.61928px 0px rgba(8, 15, 52, 0.06);
+            text-align: left;
+        }
+
+        .titleLabelDetails {
+            color: #FB6A00;
+            font-family: Roboto;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 17.486px;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+            /* 120% */
+            display: block;
+        }
+
+        .titleInfoCourse {
+            color: #000;
+            font-family: 'Anton', sans-serif;
+            font-size: 24.048px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20.2px;
+            letter-spacing: 0.962px;
+        }
+
+        #formStep03 .formCardTypeOffertTitle {
+            margin: 0 10px;
+        }
+
+        .offerInfoCourse {
+            color: #000;
+            font-family: Roboto;
+            font-size: 12.024px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14.429px;
+            /* 120% */
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offerChangeButton {
+            color: #FB6A00;
+            font-family: Roboto;
+            font-size: 12.024px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 14.429px;
+            /* 120% */
+            text-decoration-line: underline;
+            text-transform: uppercase;
+        }
+
+        .formOffertLineDivisor {
+            border: 1px solid #D9DBE9;
+            background: #D9DBE9;
+            height: 200px;
+            padding: 0.5px;
+        }
+
+        .formValueInfo {
+            margin: 20px 0;
+        }
+
+        .labelValueInfo {
+            color: #000;
+            font-family: Roboto;
+            font-size: 14.564px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17.476px;
+            margin: 0 15px 0 0;
+            /* 120% */
+        }
+
+        .labelLittlePrice {
+            color: #FB6A00;
+            text-align: right;
+            font-family: 'Anton', sans-serif;
+            font-size: 25.853px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36.194px;
+            /* 140% */
+        }
+
+        .labelPrice {
+            color: #FB6A00;
+            font-family: 'Anton', sans-serif;
+            font-size: 34.47px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36.194px;
+        }
+
+        .formOfferValueDiscont {
+            padding: 10px 30px;
+            border-radius: 63px;
+            border: 1px solid #FB6A00;
+            color: #000;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 133.333% */
+        }
+
+        .valueDiscount {
+
+            color: #FB6A00;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .formButtonFinish {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.6px;
+            border-radius: 40px;
+            background: #FB6A00;
+            width: 236px;
+            padding: 20px 30px;
+            text-transform: uppercase;
+            margin: 30px auto;
+        }
+
+        /* STEP 04 */
+        @media (min-width: 930px) {
+            #formStep04 .formHeaderText {
+                margin: 35px 0;
+            }
+
+            #formStep04 #fullName {
+                width: 250px;
+            }
+
+            #formStep05 #typeProof {
+                width: 250px;
+            }
+
+            #formStep05 .formRow:nth-child(2) {
+                justify-content: space-between !important;
+            }
+
+            .formButtonFinish {
+                color: #FFF;
+                text-align: center;
+                font-family: 'Anton', sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 33.6px;
+                border-radius: 40px;
+                background: #FB6A00;
+                width: 236px;
+                padding: 20px 30px;
+                text-transform: uppercase;
+                margin: 30px 0 0 0;
+            }
+
+            #lastRow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between !important;
+                text-align: left;
+            }
+
+            #formStep03 #cityUser {
+                width: 200px;
+            }
+
+            #formStep03 #state {
+                width: 200px;
+            }
+
+
+            #formStep01 #state {
+                width: 175px;
+            }
+
+            #formStep01 #city {
+                width: 175px;
+            }
+
+            #formStep01 #course {
+                width: 175px;
+            }
+        }
+
+
+
+        /* Configuração do Mobile */
+
+        @media (min-width: 320px) and (max-width: 430px) {
+
+            .formButtonToControllStep {
+                margin: 0 auto;
+            }
+
+            .formHeaderStepByStep {
+                max-width: 350px;
+                padding-bottom: 35px;
+            }
+
+            .formHeaderItensStepByStep {
+                border-radius: 40px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .formHeaderItensStepByStepLine {
+                width: 25px;
+            }
+
+            .formHeaderDescription {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .formRow {
+                display: block;
+            }
+
+            .formContentItem {
+                margin: 20px 0;
+            }
+
+            select .formInput {
+                min-width: none;
+            }
+
+            .formInput {
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            #acceptCheckBox label {
+                text-align: left;
+                margin: 0 0 0 10px;
+            }
+
+            /* Step 02 */
+
+            #formStep02 .formHeaderSubText {
+                font-size: 22px;
+            }
+
+            .formCardOffert {
+                padding: 40px 20px;
+                margin: 25px 0;
+                box-sizing: border-box;
+            }
+
+            .formCardNameCourseTitle {
+                font-size: 18px;
+                margin: 25px 0;
+            }
+
+            .formCardInfoItem {
+                text-align: left;
+                font-size: 12px;
+            }
+
+            #formStep02 .formContentItem {
+                box-sizing: border-box;
+            }
+
+
+            /* STEP 03 */
+
+            #formStep03 .formHeaderText {
+                font-size: 25px;
+
+            }
+
+            .formOfferDetails {
+                display: block;
+            }
+
+            #formStep03 .titleInfoCourse {
+                font-size: 16px;
+
+            }
+
+            #newChoiseCourse {
+                margin-bottom: 10px;
+            }
+
+            .formOffertLineDivisor {
+                height: 1px;
+            }
+
+            #formStep03 .labelValueInfo {
+                font-size: 12px;
+            }
+
+            #formStep03 .labelLittlePrice {
+                font-size: 20px;
+            }
+
+            #formStep03 .labelPrice {
+                font-size: 30px;
+            }
+
+            .formOfferValueDiscont {
+                padding: 10px 20px;
+
+            }
+
+
+            /* STEP 04 */
+
+            #formStep04 .formHeaderText {
+                font-size: 20px;
+                line-height: 25px;
+                margin: 20px 0;
+            }
+
+            #formStep04 .titleInfoCourse {
+                font-size: 16px;
+
+            }
+
+            #formStep04 .labelValueInfo {
+                font-size: 12px;
+            }
+
+            #formStep04 .labelLittlePrice {
+                font-size: 20px;
+            }
+
+            #formStep04 .labelPrice {
+                font-size: 30px;
+            }
+
+            /* STEP 05 */
+
+
+            #formStep05 .formHeaderText {
+                font-size: 22px;
+                line-height: 25px;
+                margin: 20px 0;
+            }
+
+            #formStep05 .titleInfoCourse {
+                font-size: 16px;
+
+            }
+
+            #formStep05 .labelValueInfo {
+                font-size: 12px;
+            }
+
+            #formStep05 .labelLittlePrice {
+                font-size: 20px;
+            }
+
+            #formStep05 .labelPrice {
+                font-size: 30px;
+            }
+
+        }
+
+        @media (min-width: 800px) and (max-width: 920px) {
+            .contentForm {
+                max-width: 700px;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            /* STEP 01  */
+
+            #formStep01 .formRow {
+                max-width: 600px;
+                margin: 35px auto;
+            }
+
+
+            #formStep01 #city {
+                width: 170px !important;
+            }
+
+            #formStep01 #course {
+                width: 170px !important;
+            }
+
+            .formButtonIWantThisOffert {
+                font-size: 25px;
+            }
+
+            .formOfferInfoDetails {
+                margin: 0 20px 0 0;
+
+            }
+
+            .titleInfoCourse {
+                line-height: 29px;
+
+            }
+
+            .formOfferValueDatails {
+                margin: 0 0 0 30px;
+
+            }
+
+            .labelLittlePrice {
+                font-size: 16px;
+            }
+
+            .labelPrice {
+                font-size: 25px;
+
+            }
+
+            #formStep03 #cityUser {
+                width: 170px;
+            }
+
+            #formStep03 #state {
+                width: 170px;
+            }
+
+            #formStep04 .formHeaderText {
+                margin: 35px 0;
+            }
+
+            #lastRow {
+                text-align: left;
+            }
+
+            #typeProof {
+                width: 250px;
+            }
+
+            .formButtonFinish {
+                margin: 60px auto 0 auto;
+            }
+        }
+
+        /* ALERT MENSAGE */
+        .boxInput {
+            box-sizing: border-box;
+            position: sticky;
+        }
+
+        .erroValidator {
+            color: #dc1e1e;
+            font-size: 10px;
+            position: absolute;
+            bottom: 0;
+            text-align: left;
+            top: -2px !important;
+            left: 11px !important;
+            background: #fff !important;
+            bottom: auto !important;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .mensagemAlert {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f8d7da;
+            margin: 10px 0;
+            border-radius: 2px;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .formInputAlert {
+            border-radius: 46px;
+            border: 1px solid #721c24;
+            outline: 1px solid #721c24;
+            box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+            padding: 20px 10px 20px 15px;
+            color: #721c24;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        const steps = document.querySelectorAll('.formBodyItensStepByStep');
+        let currentStep = 0;
+        let headerLinesActivated = false;
+        const headerItems = document.querySelectorAll('.formHeaderItensStepByStep');
+        const headerLines = document.querySelectorAll('.formHeaderItensStepByStepLine');
+        const buttonNextStep = document.getElementById('buttonNextStep');
+        const btnSteps = document.getElementsByClassName('formButtonIWantThisOffert');
+        const newOffert = document.getElementById('newOffert');
+        const acceptPolicyCheckbox = document.getElementById('acceptPolicy');
+
+        const newChoiseCourse = document.getElementsByClassName('offerChangeButton');
+
+        /* Dados para trackeamento */
+        let trackingData = {
+            IP: "",
+            trackingID: "",
+            created: "",
+            acceptPolicy: "",
+            postbackAdZappy: "",
+            responseCogna: "",
+            PID: "",
+            ClickID: "",
+            utm_source: "",
+            utm_medium: "",
+            utm_campaign: "",
+            authMail: ""
+        };
+
+
+        /* Função de trackeamento */
+        const TrackingIP = () => {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    userIp = data.ip;
+                    trackingData.IP = userIp;
+                    console.log('IP do usuário:', userIp);
+                })
+                .catch(error => console.error('Erro ao obter o IP:', error));
+        }
+
+        TrackingIP()
+
+        /* Pegar parametros de URL */
+
+        function getURLParameters() {
+            const params = new URLSearchParams(window.location.search);
+            const utm_campaign = params.get('utm_campaign');
+            const utm_source = params.get('utm_source');
+            const utm_medium = params.get('utm_medium');
+            const pid = params.get('PID');
+            const clickID = params.get('ClickID');
+            trackingData.utm_campaign = utm_campaign;
+            trackingData.utm_source = utm_source;
+            trackingData.utm_medium = utm_medium;
+            trackingData.PID = pid;
+            trackingData.ClickID = clickID;
+        }
+        const urlParams = getURLParameters();
+
+
+        /* Dados do usuário */
+        let lead = {
+            firstName: '',
+            fullName: '',
+            documentRG: '',
+            documentCPF: '',
+            phone: '',
+            email: '',
+            cep: '',
+            state: '',
+            city: '',
+            street: '',
+            complement: '',
+        }
+
+        /* Dados do curso */
+
+        let course = {
+
+        }
+
+
+        /* STEP BY STEP  */
+        function showStep(stepIndex) {
+            steps.forEach((step, index) => {
+                if (index === stepIndex) {
+                    step.classList.add("stepActive")
+                    if (index == 0) {
+                        buttonNextStep.style.display = "block";
+                    } else if (index == 1) {
+                        buttonNextStep.style.display = "none";
+                    } else if (index == 2) {
+                        buttonNextStep.style.display = "block";
+                    } else if (index == 4) {
+                        buttonNextStep.style.display = "none";
+                    }
+                } else {
+                    step.classList.remove("stepActive")
+                }
+            });
+
+            headerItems.forEach((item, index) => {
+                if (index === stepIndex) {
+                    item.classList.add('formHeaderActiveStep');
+                    if (index == 0) {
+                        item.classList.remove('formHeaderActiveStep');
+                    }
+                    if (index === stepIndex) {
+                        item.classList.add('formHeaderActiveStep');
+                    }
+
+                }
+            });
+
+
+            headerLines.forEach((line, index) => {
+                if (index < stepIndex) {
+                    line.classList.add('formHeaderItensStepByStepLineActive');
+
+                    if (index == 0) {
+                        line.classList.remove('formHeaderItensStepByStepLineActive');
+                    }
+                    if (index < stepIndex) {
+                        line.classList.add('formHeaderItensStepByStepLineActive');
+                    }
+                }
+            });
+
+        }
+
+        showStep(currentStep);
+
+
+        buttonNextStep.addEventListener('click', function () {
+            if (validarPassoAtual() && currentStep < steps.length - 1) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+
+        /* Passo de validação por etapa */
+        const BoxInput = document.getElementsByClassName('boxInput');
+
+
+        const validStep01 = () => {
+            let isValid = true;
+
+            const nome = document.getElementById('firstName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('phone').value.trim();
+
+            if (nome === '') {
+                mostrarMensagemErro(0, 'Nome é um campo obrigatório');
+                isValid = false;
+            } else {
+                removerMensagemErro(0);
+            }
+
+            if (email === '') {
+                mostrarMensagemErro(1, 'E-mail é um campo obrigatório');
+                isValid = false;
+            } else {
+                removerMensagemErro(1);
+            }
+
+            if (telefone === '') {
+                mostrarMensagemErro(2, 'Telefone é um campo obrigatório');
+                isValid = false;
+            } else {
+                removerMensagemErro(2);
+            }
+
+            return isValid;
+        }
+
+        function mostrarMensagemErro(index, mensagem) {
+            const existingError = BoxInput[index].querySelector('.erroValidator');
+            if (!existingError) {
+                const errorDiv = document.createElement('div');
+                errorDiv.classList.add('erroValidator');
+                errorDiv.textContent = mensagem;
+                BoxInput[index].appendChild(errorDiv);
+            }
+        }
+        function removerMensagemErro(index) {
+            const existingError = BoxInput[index].querySelector('.erroValidator');
+            if (existingError) {
+                BoxInput[index].removeChild(existingError);
+            }
+        }
+
+
+        function validarPassoAtual() {
+            switch (currentStep) {
+                case 0:
+                    return validStep01();
+                default:
+                    return true; 
+            }
+        }
+        /* Esolheu a oferta - Proximo Passo */
+        for (const btnStep of btnSteps) {
+            btnStep.addEventListener('click', function () {
+                if (validarPassoAtual() && currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            });
+        }
+
+
+
+        /* Realizar uma nova consulta de ofertas - STEP 02 */
+        newOffert.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
+
+        /* Executar função AdZappy */
+
+        acceptPolicyCheckbox.addEventListener('change', function () {
+            const dataInput = getDataFromInputs();
+
+            validStep01();
+            if (acceptPolicyCheckbox.checked) {
+
+                lead.firstName = dataInput.firstName;
+                lead.phone = dataInput.phone;
+                lead.email = dataInput.email;
+                lead.state = dataInput.state;
+                lead.city = dataInput.city;
+
+
+                console.log(dataInput)
+
+                const data = {
+                    lead,
+                    trackingData
+                }
+
+                console.log(data)
+
+                /* Validação se o item está vazio */
+                if (dataInput.firstName != '' || dataInput.phone != '' || dataInput.email != '') {
+                    fetch('http://localhost:3000/leadAdZappy/leadWithTracking',
+                        {
+                            method: 'POST',
+                            cache: 'no-cache',
+                            credentials: 'same-origin',
+                            headers: {
+                                "content-type": 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        }).then((res) => {
+                            console.log(res);
+                            return res;
+                        }).catch((error) => {
+                            return console.error('Erro ao realizar o envio' + error);
+                        })
+                } else {
+                    console.log('por favor preencha os campos')
+                }
+
+
+                alert('algo')
+            } else {
+
+            }
+        });
+
+
+        function getDataFromInputs() {
+            const data = {};
+            const inputs = document.querySelectorAll('input[id]');
+            const selects = document.querySelectorAll('select[id]');
+
+            inputs.forEach(input => {
+                const id = input.id;
+                const value = input.value;
+
+
+                if (id === 'dateConcluson' && value === '') {
+                    data[id] = new Date();
+                } else {
+                    data[id] = value;
+                }
+            });
+
+            selects.forEach(select => {
+                const id = select.id;
+                const value = select.value;
+                data[id] = value;
+            });
+
+            return data;
+        }
+
+        const btnCreateNewLead = document.getElementById('createNewLead');
+
+        btnCreateNewLead.addEventListener('click', (event) => {
+
+            const data = getDataFromInputs();
+
+            console.log(data);
+            fetch('http://localhost:3000/leadAdZappy',
+                {
+                    method: 'POST',
+                    cache: 'no-cache',
+                    credentials: 'same-origin',
+                    headers: {
+                        "content-type": 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then((res) => {
+                    console.log(res);
+                    return res;
+                }).catch((error) => {
+                    return console.error('Erro ao realizar o envio' + error);
+                })
+        })
+
+
+        /* Alteração de curso - Controle de Step */
+
+        for (const changeCourse of newChoiseCourse) {
+            changeCourse.addEventListener('click', function () {
+                currentStep = 1
+                steps.forEach((step, index) => {
+                    if (index === currentStep) {
+                        step.classList.add("stepActive")
+                        if (index == 0) {
+                            buttonNextStep.style.display = "block";
+                        } else if (index == 1) {
+                            buttonNextStep.style.display = "none";
+                        } else if (index == 2) {
+                            buttonNextStep.style.display = "block";
+                        } else if (index == 4) {
+                            buttonNextStep.style.display = "none";
+                        }
+
+                    } else {
+                        step.classList.remove("stepActive")
+                    }
+
+                })
+            });
+        }
+
+
+        /* Filtro 2 e-mail não validos */
+
+        const email = document.getElementById("email")
+
+        const invalidKeywords = [
+            'beeleads', 'caloga', 'adclick', 'smark.io', 'root@', 'beeleads',
+            'caloga',
+            'adclick',
+            'smark.io',
+            'root@',
+            'roots@',
+            '.host',
+            'hosts',
+            'abuso',
+            'postmaster',
+            'hostmaster',
+            'ipadmin',
+            'segurança',
+            'www.',
+            'admin-',
+            'administracao',
+            'admin_',
+            'admin.',
+            'admins-',
+            'admins_',
+            'admins.',
+            'webmaster-',
+            'webmaster_',
+            'webmaster.',
+            'webmasters-',
+            'webmasters_',
+            'webmasters.',
+            'root-',
+            'root_',
+            'root.',
+            'roots-',
+            'roots_',
+            'roots.',
+            'Informacao',
+            'host-',
+            'host_',
+            'host.',
+            'hosts-',
+            'hosts_',
+            'hosts.',
+            'system',
+            'tech-',
+            'tech_',
+            'tech.',
+            'nexus',
+            'maddox',
+            'teste',
+            'proxad.net',
+            'wrwer.com',
+            'bungi.com',
+            'agora.bungi.com',
+            'amen.fr',
+            'emailvision.com',
+            'totalcommunications.com',
+            'operamail.com',
+            'france-strategies.com',
+            'sdgsd.com',
+            'node.com',
+            'proteste.org.br',
+            'adcon.org.br',
+            'adec-df.org.br',
+            'ongabc.org.br',
+            'anadec.org.br',
+            'idec.org.br',
+            'aceba.org.br',
+            'com4.com.br',
+            '@com.br',
+            '@spamgourmet',
+            '@tele2',
+            '@test',
+            '@yopmail',
+            '@yaho.',
+            '@yahooo.',
+            '@ahoo.com.br',
+            '@yahool.com.br',
+            '@yaool.com.br',
+            '@yhaoo.com.br',
+            '@yaroo.com.br',
+            '@yaroo.com',
+            '@hotmai.',
+            '@h0tmail.',
+            '@hotmaill.',
+            '@hormail.',
+            '@hotmil.com',
+            '@hotimaio.com',
+            '@homail.com.br',
+            '@rotmail.com',
+            '@hotimail.com',
+            '@otmail.com',
+            '@hotimeil',
+            '@hotemail',
+            '@hotamil',
+            '@hoymail.com',
+            '@gmai.',
+            '@gmaill.',
+            '@gmal.',
+            '@gmaol.',
+            '@7gmail.',
+            '@7gmai.',
+            '@jgmail.com',
+            '@gamil.com',
+            '@vol.com.br',
+            '@colombo.com.br',
+            '@mercur.com.br',
+            '@unicentro.br',
+            '@ueg.br',
+            '@unigel.com.br',
+            '@bitcom.com.br',
+            '@bool.com.br',
+            '@tramontina.net',
+            '@br-petrobras.com.br',
+            '@grendene.com.br',
+            '.b;',
+            '.r;',
+            '.coom;',
+            '.ccom;',
+            '.brr;',
+            '.bbr;',
+            '[0-9]hotmai',
+            'ymai.com',
+            'hotnail.com',
+            'hotmqil.com',
+            'gnail.com',
+            'omhotmail.com',
+            '@[aA-zZ]hotmail',
+            '@aaa',
+            '@bbb',
+            '@ccc',
+            '@ddd',
+            '@eee',
+            '@fff',
+            '@ggg',
+            '@hhh',
+            '@iii',
+            '@jjj',
+            '@kkk',
+            '@lll',
+            '@mmm',
+            '@nnn',
+            '@ooo',
+            '@ppp',
+            '@qqq',
+            '@rrr',
+            '@sss',
+            '@ttt',
+            '@uuu',
+            '@vvv',
+            '@xxx',
+            '@yyy',
+            '@zzz',
+            'ouvidoria@',
+            'account@',
+            'adm@',
+            'administracao@',
+            'administrador@',
+            'administrativo@',
+            'assistente@',
+            'atendimento@',
+            'bank@',
+            'billing@',
+            'business@',
+            'compras1@',
+            'comunicacao@',
+            'contatos@',
+            'cpd@',
+            'design@',
+            'designer@',
+            'dir@',
+            'diretor@',
+            'email@',
+            'eventos@',
+            'expedicao@',
+            'help@',
+            'home@',
+            'job@',
+            'mail@',
+            'manager@',
+            'marketing@',
+            'news@',
+            'office@',
+            'operacoes@',
+            'post@',
+            'privacy@',
+            'secretaria@',
+            'service@',
+            'services@',
+            'supervisao@',
+            'suprimentos@',
+            'sweetkelly73@',
+            'teste@',
+            'transporte@',
+            'vilsoncerqueira@',
+            '@arquivonacional.com.br',
+            '@cocacolagr.com.br',
+            '@exemplo.com',
+            '@fecebook.com',
+            '@gmail.coml.com',
+            '@hitech2thdoc.com',
+            '@hoail.com',
+            '@homal.com',
+            '@hotmal.com.br',
+            '@hotmasil.com',
+            '@hotnail.com.br',
+            '@ibest.com.br',
+            '@natuscosmeticos.com.br',
+            '@uoil.com.br',
+            '@viars.net',
+            '@wep6.com',
+            '@ufrgs.br',
+            '@vivointernetdiscada.com.br',
+            'adm@',
+            'administracao@',
+            'administrativo@',
+            'assistente@',
+            '0815.ru',
+            '0clickemail.com',
+            '0wnd.net',
+            '0wnd.org',
+            '10minutemail.com',
+            '20minutemail.com',
+            '2prong.com',
+            '3d-painting.com',
+            '4warding.com',
+            '4warding.net',
+            '4warding.org',
+            '6url.com',
+            '9ox.net',
+            'a-bc.net',
+            'afrobacon.com',
+            'ajaxapp.net',
+            'amilegit.com',
+            'amiri.net',
+            'amiriindustries.com',
+            'anonbox.net',
+            'anonymail.dk',
+            'anonymbox.com',
+            'antichef.com',
+            'antichef.net',
+            'antispam.de',
+            'baxomale.ht.cx',
+            'beefmilk.com',
+            'binkmail.com',
+            'bio-muesli.net',
+            'blogmyway.org',
+            'bobmail.info',
+            'bodhi.lawlita.com',
+            'bofthew.com',
+            'brefmail.com',
+            'bsnow.net',
+            'bugmenot.com',
+            'bumpymail.com',
+            'buyusedlibrarybooks.org',
+            'casualdx.com',
+            'centermail.com',
+            'centermail.net',
+            'chogmail.com',
+            'choicemail1.com',
+            'cool.fr.nf',
+            'correo.blogos.net',
+            'cosmorph.com',
+            'courriel.fr.nf',
+            'courrieltemporaire.com',
+            'curryworld.de',
+            'cust.in',
+            'dacoolest.com',
+            'dandikmail.com',
+            'deadaddress.com',
+            'deadspam.com',
+            'despam.it',
+            'despammed.com',
+            'devnullmail.com',
+            'dfgh.net',
+            'digitalsanctuary.com',
+            'discardmail.com',
+            'discardmail.de',
+            'disposableaddress.com',
+            'disposeamail.com',
+            'disposemail.com',
+            'dispostable.com',
+            'dm.w3internet.co.uk',
+            'dodgeit.com',
+            'dodgit.com',
+            'dodgit.org',
+            'dontreg.com',
+            'dontsendmespam.de',
+            'dotmsg.com',
+            'dumpandjunk.com',
+            'dump-email.info',
+            'dumpmail.de',
+            'dumpyemail.com',
+            'e4ward.com',
+            'email60.com',
+            'emaildienst.de',
+            'emailias.com',
+            'emailinfive.com',
+            'emailmiser.com',
+            'emailtemporario.com.br',
+            'emailto.de',
+            'emailwarden.com',
+            'emailxfer.com',
+            'emz.net',
+            'enterto.com',
+            'ephemail.net',
+            'explodemail.com',
+            'fakeinbox.com',
+            'fakeinformation.com',
+            'fakemailz.com',
+            'fastacura.com',
+            'filzmail.com',
+            'fizmail.com',
+            'footard.com',
+            'forgetmail.com',
+            'frapmail.com',
+            'front14.org',
+            'garliclife.com',
+            'get1mail.com',
+            'getonemail.com',
+            'getonemail.net',
+            'ghosttexter.de',
+            'girlsundertheinfluence.com',
+            'gishpuppy.com',
+            'great-host.in',
+            'greensloth.com',
+            'gsrv.co.uk',
+            'guerillamail.biz',
+            'guerillamail.com',
+            'guerillamail.net',
+            'guerillamail.org',
+            'guerrillamail.com',
+            'guerrillamail.net',
+            'guerrillamailblock.com',
+            'h8s.org',
+            'haltospam.com',
+            'hatespam.org',
+            'hidemail.de',
+            'hotpop.com',
+            'ieatspam.eu',
+            'ieatspam.info',
+            'ihateyoualot.info',
+            'iheartspam.org',
+            'imails.info',
+            'inboxclean.com',
+            'inboxclean.org',
+            'incognitomail.com',
+            'incognitomail.net',
+            'ipoo.org',
+            'irish2me.com',
+            'jetable.com',
+            'jetable.fr.nf',
+            'jetable.net',
+            'jetable.org',
+            'jnxjn.com',
+            'junk1e.com',
+            'kasmail.com',
+            'kaspop.com',
+            'killmail.com',
+            'killmail.net',
+            'klassmaster.net',
+            'klzlk.com',
+            'kulturbetrieb.info',
+            'kurzepost.de',
+            'lifebyfood.com',
+            'link2mail.net',
+            'litedrop.com',
+            'lookugly.com',
+            'lopl.co.cc',
+            'lortemail.dk',
+            'lovemeleaveme.com',
+            'lr78.com',
+            'maboard.com',
+            'mail.by',
+            'mail.mezimages.net',
+            'mail2rss.org',
+            'mail333.com',
+            'mail4trash.com',
+            'mailbidon.com',
+            'mailblocks.com',
+            'mailcatch.com',
+            'maileater.com',
+            'mailexpire.com',
+            'mailfreeonline.com',
+            'mailin8r.com',
+            'mailinater.com',
+            'mailinator.com',
+            'mailinator.net',
+            'mailinator2.com',
+            'mailincubator.com',
+            'mailme.lv',
+            'mailmetrash.com',
+            'mailmoat.com',
+            'mailnator.com',
+            'mailnator.net',
+            'mailnull.com',
+            'mailquack.com',
+            'mailshell.com',
+            'mailsiphon.com',
+            'mailslapping.com',
+            'mailzilla.com',
+            'mailzilla.org',
+            'mbx.cc',
+            'mega.zik.dj',
+            'meinspamschutz.de',
+            'meltmail.com',
+            'messagebeamer.de',
+            'mierdamail.com',
+            'mintemail.com',
+            'moncourrier.fr.nf',
+            'monemail.fr.nf',
+            'monmail.fr.nf',
+            'mt2009.com',
+            'mx0.wwwnew.eu',
+            'mycleaninbox.net',
+            'myspamless.com',
+            'mytrashmail.com',
+            'neomailbox.com',
+            'nepwk.com',
+            'nervmich.net',
+            'nervtmich.net',
+            'netmails.com',
+            'netmails.net',
+            'netzidiot.de',
+            'neverbox.com',
+            'nobulk.com',
+            'noclickemail.com',
+            'nogmailspam.info',
+            'nomail.xl.cx',
+            'nomail2me.com',
+            'no-spam.ws',
+            'nospam.ze.tc',
+            'nospam4.us',
+            'nospamfor.us',
+            'nowmymail.com',
+            'nurfuerspam.de',
+            'objectmail.com',
+            'obobbo.com',
+            'oneoffemail.com',
+            'oneoffmail.com',
+            'onewaymail.com',
+            'oopi.org',
+            'ordinaryamerican.net',
+            'otherinbox.com',
+            'outlawspam.com',
+            'owlpic.com',
+            'pancakemail.com',
+            'poofy.org',
+            'pookmail.com',
+            'privacy.net',
+            'proxymail.eu',
+            'punkass.com',
+            'putthisinyourspamdatabase.com',
+            'quickinbox.com',
+            'rcpt.at',
+            'recode.me',
+            'recursor.net',
+            'recyclemail.dk',
+            'regbypass.comsafe-mail.net',
+            'rejectmail.com',
+            'safersignup.de',
+            'safetymail.info',
+            'sandelf.de',
+            'saynotospams.com',
+            'selfdestructingmail.com',
+            'sendspamhere.com',
+            'sharklasers.com',
+            'shiftmail.com',
+            'shitmail.me',
+            'shortmail.net',
+            'sibmail.com',
+            'skeefmail.com',
+            'slaskpost.se',
+            'slopsbox.com',
+            'smellfear.com',
+            'snakemail.com',
+            'sneakemail.com',
+            'sofort-mail.de',
+            'sogetthis.com',
+            'soodonims.com',
+            'spam.la',
+            'spamavert.com',
+            'spambob.com',
+            'spambob.net',
+            'spambob.org',
+            'spambog.com',
+            'spambog.de',
+            'spambog.ru',
+            'spambox.info',
+            'spambox.us',
+            'spamcannon.com',
+            'spamcannon.net',
+            'spamcero.com',
+            'spamcon.org',
+            'spamcorptastic.com',
+            'spamcowboy.com',
+            'spamcowboy.net',
+            'spamcowboy.org',
+            'spamday.com',
+            'spamex.com',
+            'spamfree24.com',
+            'spamfree24.de',
+            'spamfree24.eu',
+            'spamfree24.info',
+            'spamfree24.net',
+            'spamfree24.org',
+            'spamgourmet.com',
+            'spamgourmet.net',
+            'spamgourmet.org',
+            'spamherelots.com',
+            'spamhereplease.com',
+            'spamhole.com',
+            'spamify.com',
+            'spaminator.de',
+            'spamkill.info',
+            'spaml.com',
+            'spaml.de',
+            'spammote.com',
+            'spammotel.com',
+            'spamobox.com',
+            'spamoff.de',
+            'spamslicer.com',
+            'spamspot.com',
+            'spamthis.co.uk',
+            'spamthisplease.com',
+            'spamtrail.com',
+            'speed.1s.fr',
+            'spoofmail.de',
+            'suremail.info',
+            'tempalias.com',
+            'tempemail.biz',
+            'tempemail.com',
+            'tempe-mail.com',
+            'TempEMail.net',
+            'tempinbox.co.uk',
+            'tempinbox.com',
+            'tempomail.fr',
+            'temporarily.de',
+            'temporaryemail.net',
+            'temporaryforwarding.com',
+            'temporaryinbox.com',
+            'thankyou2010.com',
+            'thisisnotmyrealemail.com',
+            'throwawayemailaddress.com',
+            'tilien.com',
+            'tmailinator.com',
+            'tradermail.info',
+            'trash2009.com',
+            'trash-amil.com',
+            'trashdevil.com',
+            'trashdevil.de',
+            'trashemail.de',
+            'trashmail.at',
+            'trash-mail.at',
+            'trashmail.com',
+            'trash-mail.com',
+            'trashmail.de',
+            'trash-mail.de',
+            'trashmail.me',
+            'trashmail.net',
+            'trashmail.org',
+            'trashmailer.com',
+            'trashymail.com',
+            'trashymail.net',
+            'twinmail.de',
+            'tyldd.com',
+            'uggsrock.com',
+            'venompen.com',
+            'wegwerfadresse.de',
+            'wegwerfmail.de',
+            'wegwerfmail.net',
+            'wegwerfmail.org',
+            'wh4f.org',
+            'whopy.com',
+            'whyspam.me',
+            'wilemail.com',
+            'willselfdestruct.com',
+            'winemaven.info',
+            'wronghead.com',
+            'wuzup.net',
+            'wuzupmail.net',
+            'wwwnew.eu',
+            'xemaps.com',
+            'xents.com',
+            'xmaily.com',
+            'xoxy.net',
+            'yep.it',
+            'yogamaven.com',
+            'yopmail.com',
+            'yopmail.fr',
+            'yopmail.net',
+            'yuurok.com',
+            'zippymail.info',
+            'zoemail.org',
+            'ahlfield@',
+            'comercial@',
+            'company@',
+            'compras@',
+            'contact@',
+            'contato@',
+            'director@',
+            'info@',
+            'faleconosco@',
+            'financeiro@',
+            'honeypot@',
+            'emmett.ridell@',
+            'vendas@',
+            'diretoria@',
+            'commercial@',
+            'media-int@',
+            'info1@',
+            'doutor-micro@',
+            'doutor-micro1@',
+            'anita_dick@',
+            'armando_pinto@',
+            'dee_mented@',
+            'diva_gina@',
+            'fugiro_nakombi@',
+            'gaye_males@',
+            'jenny_tull@',
+            'doutormicro@',
+            'disunites@',
+            'ntenttato@',
+            'ghost',
+            'robot',
+            'attack',
+            'phantom',
+            'spam',
+            'virus',
+            'newsletter',
+            'Troia',
+            'criminel',
+            'spider',
+            'bulk',
+            'fake',
+            'hacker',
+            'spion',
+            'reply',
+            'trigger',
+            'editor',
+            'abuse',
+            'marketing',
+            'honey',
+            'track',
+            'blacklist',
+            'account',
+            'detection',
+            'admission',
+            'office',
+            'booking',
+            'careers',
+            'postmaster',
+            'contact',
+            'privacy',
+            'remove',
+            'customer',
+            'service',
+            'request',
+            'custserv',
+            'server',
+            'resume',
+            'editor',
+            'shit',
+            'imagine',
+            'everyone',
+            'feedback',
+            'security',
+            'finance',
+            'ftp',
+            'subscribe',
+            'helpdesk',
+            'support',
+            'test',
+            'usenet',
+            'honey',
+            'information'
+        ];
+
+        const AdvAndGov = [
+            '@adv.oabrj.org.br',
+            'advocacia',
+            'advogado',
+            'advogada',
+            'advogadas',
+            'advogados',
+            '.adv',
+            'adv.',
+            'adv@',
+            'advg',
+            'advog',
+            'portaldoconsumidor.gov.br',
+            '.gov.br',
+            '.gov',
+            '@gov',
+            'gov.pt',
+            'governo',
+        ]
+        function containsInvalidKeyword(email) {
+            return invalidKeywords.some(keyword => email.includes(keyword));
+        }
+
+        const containEmailAdvAndGov = (email) => {
+            return AdvAndGov.some(mail => email.includes(mail))
+        }
+        email.addEventListener('input', (event) => {
+            const emailEvent = event.target.value;
+            const messageElement = document.getElementById('message');
+
+            if (containsInvalidKeyword(emailEvent)) {
+                messageElement.textContent = 'Esse e-mail não é válido!';
+                messageElement.classList.add("mensagemAlert");
+                email.classList.remove('formInput');
+                email.classList.add('formInputAlert');
+            } else {
+                messageElement.textContent = '';
+                messageElement.classList.remove("mensagemAlert");
+                email.classList.add('formInput');
+                email.classList.remove('formInputAlert');
+
+                if (containEmailAdvAndGov(emailEvent)) {
+                    var auxEmail = true;
+                    console.log('esse e-mail é de advogados')
+                } else {
+
+                }
+            }
+
+
+        });
+
+
+        /* Mascarás nos campos  */
+
+        /* Telefone */
+
+        const phone = document.getElementById('phone');
+        phone.addEventListener('input', (e) => {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+
+        /* CEP */
+
+        const cep = document.getElementById('cep');
+        cep.addEventListener('input', (e) => {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,5})(\d{0,3})/);
+            e.target.value = x[1] + (x[2] ? '-' + x[2] : '');
+        });
+
+        /* Data de Nascimento */
+        const dateBorn = document.getElementById('dateBorn');
+        dateBorn.addEventListener('input', (e) => {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
+            e.target.value = x[1] + (x[2] ? '/' + x[2] : '') + (x[3] ? '/' + x[3] : '');
+            verificarIdade(e.target.value);
+        });
+
+        /* Verificação de IDADE */
+        function verificarIdade(dataNascimento) {
+            var partesData = dataNascimento.split('/');
+            if (partesData.length === 3) {
+                var dataFormatada = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+                var dataAtual = new Date();
+                var idade = dataAtual.getFullYear() - dataFormatada.getFullYear();
+                var m = dataAtual.getMonth() - dataFormatada.getMonth();
+                if (m < 0 || (m === 0 && dataAtual.getDate() < dataFormatada.getDate())) {
+                    idade--;
+                }
+
+                // Exibir mensagem se a idade for menor ou igual a 15 anos
+                if (idade <= 15) {
+                    document.getElementById('mensagemIdade').innerText = "Você precisa ter mais de 15 anos de idade.";
+                } else {
+                    document.getElementById('mensagemIdade').innerText = "";
+                }
+            }
+        }
+
+        /* RG */
+        const documentRG = document.getElementById('documentRG');
+        documentRG.addEventListener('input', (e) => {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,1})/);
+            e.target.value = x[1] + (x[2] ? '.' + x[2] : '') + (x[3] ? '.' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+        });
+
+        /* CPF */
+        const documentCPF = document.getElementById('documentCPF');
+        documentCPF.addEventListener('input', (e) => {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,3})(\d{0,2})/);
+            e.target.value = x[1] + (x[2] ? '.' + x[2] : '') + (x[3] ? '.' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+        });
+        /* Data de conclusão */
+        const dateConclusion = document.getElementById('dateConcluson');
+        dateConclusion.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+            if (e.target.value.length > 4) {
+                e.target.value = e.target.value.slice(0, 4);
+            }
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
