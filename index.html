@@ -2816,7 +2816,7 @@
             }
         });
 
-        inputNumero.addEventListener('input', function (event) {
+        inputNumberHouse.addEventListener('input', function (event) {
             if (this.value !== '') {
                 removerMensagemErro(6); // Esta função será chamada se o campo não estiver vazio
                 this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
@@ -2828,6 +2828,43 @@
                 this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
             }
         });
+
+
+        inputNomeCompleto.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(8); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputDataNasciment.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(9); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputAnodeConclusao.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(10); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputDocumentRGV.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(11); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputDocumentCPFV.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(12); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
         /* Mascarás nos campos  */
 
         /* Telefone */
