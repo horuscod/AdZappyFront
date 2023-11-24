@@ -1583,11 +1583,11 @@
         const inputComplement = document.getElementById('complement');
 
 
-        const inputNomeCompleto = document.getElementById('fullName').value.trim();
-        const inputDataNasciment = document.getElementById('dateBorn').value.trim();
-        const inputAnodeConclusao = document.getElementById('dateConcluson').value.trim();
-        const inputDocumentRGV = document.getElementById('documentRG').value.trim();
-        const inputDocumentCPFV = document.getElementById('documentCPF').value.trim();
+        const inputNomeCompleto = document.getElementById('fullName');
+        const inputDataNasciment = document.getElementById('dateBorn');
+        const inputAnodeConclusao = document.getElementById('dateConcluson');
+        const inputDocumentRGV = document.getElementById('documentRG');
+        const inputDocumentCPFV = document.getElementById('documentCPF');
 
         document.getElementById('dropdown').addEventListener('click', function () {
             //document.getElementById('dropdown-options').style.display = 'block';
@@ -2797,6 +2797,34 @@
         inputTelefone.addEventListener('input', function (event) {
             if (this.value !== '') {
                 removerMensagemErro(2); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+
+        inputCep.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(4); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputRua.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(5); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+
+        inputNumero.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(6); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
+        inputComplement.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(7); // Esta função será chamada se o campo não estiver vazio
                 this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
             }
         });
