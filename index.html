@@ -452,16 +452,19 @@
                             <label for="fullName">
                                 Nome completo sem abreviações
                             </label>
-                            <input type="text" id="fullName" class="formInput" placeholder="Nome completo"
-                                alt="Campo para informar o Nome completo da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="fullName" class="formInput" placeholder="Nome completo"
+                                    alt="Campo para informar o Nome completo da pessoa" />
+                            </div>
                         </div>
                         <div class="formContentItem">
                             <label for="dateBorn">
                                 Data de nascimento
                             </label>
-                            <input type="text" id="dateBorn" class="formInput" placeholder="00/00/00"
-                                alt="Campo para informar data de nascimento da pessoa" />
-                            <div id="mensagemIdade"></div>
+                            <div class="boxInput">
+                                <input type="text" id="dateBorn" class="formInput" placeholder="00/00/00"
+                                    alt="Campo para informar data de nascimento da pessoa" />
+                            </div>
                         </div>
                     </div>
                     <div class="formRow">
@@ -469,22 +472,28 @@
                             <label for="dateConcluson">
                                 Ano de conclusão
                             </label>
-                            <input type="text" id="dateConcluson" class="formInput" placeholder="0000"
-                                alt="Campo para informar data de conclusão do ensino medio" />
+                            <div class="boxInput">
+                                <input type="text" id="dateConcluson" class="formInput" placeholder="0000"
+                                    alt="Campo para informar data de conclusão do ensino medio" />
+                            </div>
                         </div>
                         <div class="formContentItem">
                             <label for="documentRG">
                                 Numero RG
                             </label>
-                            <input type="text" id="documentRG" class="formInput" placeholder="RG"
-                                alt="Campo para informar numero do RG da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="documentRG" class="formInput" placeholder="RG"
+                                    alt="Campo para informar numero do RG da pessoa" />
+                            </div>
                         </div>
                         <div class="formContentItem">
                             <label for="documentCPF">
                                 Numero CPF
                             </label>
-                            <input type="text" id="documentCPF" class="formInput" placeholder="CPF"
-                                alt="Campo para informar numero do cpf da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="documentCPF" class="formInput" placeholder="CPF"
+                                    alt="Campo para informar numero do cpf da pessoa" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1573,6 +1582,13 @@
         const inputNumberHouse = document.getElementById('numberHouse');
         const inputComplement = document.getElementById('complement');
 
+
+        const inputNomeCompleto = document.getElementById('fullName').value.trim();
+        const inputDataNasciment = document.getElementById('dateBorn').value.trim();
+        const inputAnodeConclusao = document.getElementById('dateConcluson').value.trim();
+        const inputDocumentRGV = document.getElementById('documentRG').value.trim();
+        const inputDocumentCPFV = document.getElementById('documentCPF').value.trim();
+
         document.getElementById('dropdown').addEventListener('click', function () {
             //document.getElementById('dropdown-options').style.display = 'block';
         });
@@ -1833,6 +1849,57 @@
             }
             return isValid;
         }
+
+
+        const validStep04 = () => {
+            let isValid = true;
+            const NomeCompleto = document.getElementById('fullName').value.trim();
+            const DataNasciment = document.getElementById('dateBorn').value.trim();
+            const AnodeConclusao = document.getElementById('dateConcluson').value.trim();
+            const documentRGV = document.getElementById('documentRG').value.trim();
+            const documentCPFV = document.getElementById('documentCPF').value.trim();
+            if (NomeCompleto === '') {
+                mostrarMensagemErro(8, 'Esse campo é obrigatório');
+                inputNomeCompleto.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(8);
+                inputNomeCompleto.classList.remove('inputInvalid');
+            }
+            if (DataNasciment === '') {
+                mostrarMensagemErro(9, 'Esse campo é obrigatório');
+                inputDataNasciment.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(9);
+                inputDataNasciment.classList.remove('inputInvalid');
+            }
+            if (AnodeConclusao === '') {
+                mostrarMensagemErro(10, 'Esse campo é obrigatório');
+                inputAnodeConclusao.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(10);
+                inputAnodeConclusao.classList.remove('inputInvalid');
+            }
+            if (documentRGV === '') {
+                mostrarMensagemErro(11, 'Esse campo é obrigatório');
+                inputDocumentRGV.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(11);
+                inputDocumentRGV.classList.remove('inputInvalid');
+            }
+            if (documentCPFV === '') {
+                mostrarMensagemErro(11, 'Esse campo é obrigatório');
+                inputDocumentCPFV.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(11);
+                inputDocumentCPFV.classList.remove('inputInvalid');
+            }
+            return isValid;
+        }
         function mostrarMensagemErro(index, mensagem) {
             const existingError = BoxInput[index].querySelector('.erroValidator');
             if (!existingError) {
@@ -1857,6 +1924,9 @@
 
                 case 2:
                     return validStep03();
+
+                case 3:
+                    return validStep04();
                 default:
                     return true;
             }
