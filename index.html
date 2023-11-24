@@ -329,11 +329,14 @@
 
                     <div class="formRow">
                         <div class="formContentItem">
+
                             <label for="cep">
                                 CEP
                             </label>
-                            <input type="text" id="cep" class="formInput" placeholder="00000-000"
-                                alt="Campo para informar o Nome da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="cep" class="formInput" placeholder="00000-000"
+                                    alt="Campo para informar o Nome da pessoa" />
+                            </div>
                         </div>
                         <div class="formContentItem">
                             <label for="state">
@@ -358,22 +361,29 @@
                             <label for="street">
                                 Rua
                             </label>
-                            <input type="text" id="street" class="formInput" placeholder="Rua"
-                                alt="Campo para informar o Nome da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="street" class="formInput" placeholder="Rua"
+                                    alt="Campo para informar o Nome da pessoa" />
+                            </div>
+
                         </div>
                         <div class="formContentItem">
                             <label for="numberHouse">
                                 Número
                             </label>
-                            <input type="text" id="numberHouse" class="formInput" placeholder="Numero"
-                                alt="Campo para informar o Nome da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="numberHouse" class="formInput" placeholder="Numero"
+                                    alt="Campo para informar o Nome da pessoa" />
+                            </div>
                         </div>
                         <div class="formContentItem">
                             <label for="complement">
                                 Complemento
                             </label>
-                            <input type="text" id="complement" class="formInput" placeholder="Ex: casa, apto..."
-                                alt="Campo para informar o Nome da pessoa" />
+                            <div class="boxInput">
+                                <input type="text" id="complement" class="formInput" placeholder="Ex: casa, apto..."
+                                    alt="Campo para informar o Nome da pessoa" />
+                            </div>
                         </div>
 
 
@@ -1558,6 +1568,11 @@
         const inputNome = document.getElementById('firstName');
         const inputTelefone = document.getElementById('phone');
 
+        const inputCep = document.getElementById('cep');
+        const inputRua = document.getElementById('street');
+        const inputNumberHouse = document.getElementById('numberHouse');
+        const inputComplement = document.getElementById('complement');
+
         document.getElementById('dropdown').addEventListener('click', function () {
             //document.getElementById('dropdown-options').style.display = 'block';
         });
@@ -1768,7 +1783,7 @@
 
             const acceptPolicyCheckbox = document.getElementById('acceptPolicy'); // Substitua pelo ID correto do seu checkbox
             if (!acceptPolicyCheckbox.checked) {
-                
+
                 isValid = false;
             } else {
                 removerMensagemErro(3);
@@ -1776,6 +1791,48 @@
             return isValid;
         }
 
+
+        const validStep03 = () => {
+            let isValid = true;
+            const cep = document.getElementById('cep').value.trim();
+            const Rua = document.getElementById('street').value.trim();
+            const numberHouse = document.getElementById('numberHouse').value.trim();
+            const complement = document.getElementById('complement').value.trim();
+
+            if (cep === '') {
+                mostrarMensagemErro(4, 'Esse campo é obrigatório');
+                inputCep.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(4);
+                inputCep.classList.remove('inputInvalid');
+            }
+            if (Rua === '') {
+                mostrarMensagemErro(5, 'Esse campo é obrigatório');
+                inputRua.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(5);
+                inputRua.classList.remove('inputInvalid');
+            }
+            if (numberHouse === '') {
+                mostrarMensagemErro(6, 'Esse campo é obrigatório');
+                inputNumberHouse.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(6);
+                inputNumberHouse.classList.remove('inputInvalid');
+            }
+            if (complement === '') {
+                mostrarMensagemErro(7, 'Esse campo é obrigatório');
+                inputComplement.classList.add('inputInvalid');
+                isValid = false;
+            } else {
+                removerMensagemErro(7);
+                inputComplement.classList.remove('inputInvalid');
+            }
+            return isValid;
+        }
         function mostrarMensagemErro(index, mensagem) {
             const existingError = BoxInput[index].querySelector('.erroValidator');
             if (!existingError) {
@@ -1797,6 +1854,9 @@
             switch (currentStep) {
                 case 0:
                     return validStep01();
+
+                case 2:
+                    return validStep03();
                 default:
                     return true;
             }
