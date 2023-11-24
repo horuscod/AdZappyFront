@@ -2816,6 +2816,7 @@
         cep.addEventListener('input', (e) => {
             var x = e.target.value.replace(/\D/g, '').match(/(\d{0,5})(\d{0,3})/);
             e.target.value = x[1] + (x[2] ? '-' + x[2] : '');
+            inputCep.classList.remove('inputInvalid');
         });
 
         /* Data de Nascimento */
@@ -2823,6 +2824,7 @@
         dateBorn.addEventListener('input', (e) => {
             var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,4})/);
             e.target.value = x[1] + (x[2] ? '/' + x[2] : '') + (x[3] ? '/' + x[3] : '');
+            inputDataNasciment.classList.remove('inputInvalid')
             verificarIdade(e.target.value);
         });
 
@@ -2852,6 +2854,7 @@
         documentRG.addEventListener('input', (e) => {
             var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,1})/);
             e.target.value = x[1] + (x[2] ? '.' + x[2] : '') + (x[3] ? '.' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+            inputDocumentRGV.classList.remove('inputInvalid')
         });
 
         /* CPF */
@@ -2859,6 +2862,7 @@
         documentCPF.addEventListener('input', (e) => {
             var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,3})(\d{0,2})/);
             e.target.value = x[1] + (x[2] ? '.' + x[2] : '') + (x[3] ? '.' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+            inputDocumentCPFV.classList.remove('inputInvalid')
         });
         /* Data de conclusão */
         const dateConclusion = document.getElementById('dateConcluson');
@@ -2866,6 +2870,7 @@
             e.target.value = e.target.value.replace(/\D/g, '');
             if (e.target.value.length > 4) {
                 e.target.value = e.target.value.slice(0, 4);
+                inputAnodeConclusao.classList.remove('inputInvalid')
             }
         });
 
