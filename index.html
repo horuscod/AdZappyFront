@@ -115,16 +115,18 @@
                     </div>
                     <div class="formRow">
                         <div class="formContentItem" id="acceptCheckBox">
-                            <input type="checkbox" id="acceptPolicy" />
-                            <label for="acceptPolicy">Aceito ser chamado por telefone, email, whatsapp e SMS pela
-                                AdZappy / Anhaguera.
-                                <br />
-                                A qualquer momento poderei solicitar a exclusão dos meus dados da lista. Leia nossa <a
-                                    href="https://www.adzappy.com/pt/pp.html"
-                                    alt="Link para política de privacidade do usuário" target="_blank">
-                                    política de privacidade para mais informações
-                                </a>
-                            </label>
+                            <div class="boxInput" style="display: flex;">
+                                <input type="checkbox" id="acceptPolicy" />
+                                <label for="acceptPolicy">Aceito ser chamado por telefone, email, whatsapp e SMS pela
+                                    AdZappy / Anhaguera.
+                                    <br />
+                                    A qualquer momento poderei solicitar a exclusão dos meus dados da lista. Leia nossa
+                                    <a href="https://www.adzappy.com/pt/pp.html"
+                                        alt="Link para política de privacidade do usuário" target="_blank">
+                                        política de privacidade para mais informações
+                                    </a>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1698,8 +1700,31 @@
 
         /* Passo de validação por etapa */
         const BoxInput = document.getElementsByClassName('boxInput');
+        const email = document.getElementById("email")
+        const isValidEmail = (email) => {
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return emailRegex.test(email);
+        };
+
+        email.addEventListener('input', (event) => {
+            const emailEvent = event.target.value;
+
+            if (!isValidEmail(emailEvent)) {
+                mostrarMensagemErro(1, 'Esse e-mail não é válido');
+                email.classList.add('inputInvalid');
+            } else {
+                removerMensagemErro(1);
+                email.classList.remove('inputInvalid');
 
 
+
+                if (containEmailAdvAndGov(emailEvent)) {
+                    var auxEmail = true;
+                    console.log('esse e-mail é de advogados');
+                }
+            }
+
+        });
         const validStep01 = () => {
             let isValid = true;
 
@@ -1723,9 +1748,13 @@
                 mostrarMensagemErro(1, 'E-mail é um campo obrigatório');
                 inputEmail.classList.add('inputInvalid');
                 isValid = false;
+            } else if (!isValidEmail(email)) {
+                mostrarMensagemErro(1, 'Esse e-mail não é válido');
+                inputEmail.classList.add('inputInvalid');
+                isValid = false;
             } else {
-                inputEmail.classList.remove('inputInvalid');
                 removerMensagemErro(1);
+                inputEmail.classList.remove('inputInvalid');
             }
 
             if (telefone === '') {
@@ -1737,6 +1766,13 @@
                 removerMensagemErro(2);
             }
 
+            const acceptPolicyCheckbox = document.getElementById('acceptPolicy'); // Substitua pelo ID correto do seu checkbox
+            if (!acceptPolicyCheckbox.checked) {
+                
+                isValid = false;
+            } else {
+                removerMensagemErro(3);
+            }
             return isValid;
         }
 
@@ -1790,8 +1826,9 @@
         acceptPolicyCheckbox.addEventListener('change', function () {
             const dataInput = getDataFromInputs();
 
-            validStep01();
-            if (acceptPolicyCheckbox.checked) {
+            const isFormValid = validStep01();
+
+            if (isFormValid && acceptPolicyCheckbox.checked) {
 
                 lead.firstName = dataInput.firstName;
                 lead.phone = dataInput.phone;
@@ -1915,7 +1952,7 @@
 
         /* Filtro 2 e-mail não validos */
 
-        const email = document.getElementById("email")
+
 
         const invalidKeywords = [
             'beeleads', 'caloga', 'adclick', 'smark.io', 'root@', 'beeleads',
@@ -2619,27 +2656,6 @@
         const containEmailAdvAndGov = (email) => {
             return AdvAndGov.some(mail => email.includes(mail))
         }
-        email.addEventListener('input', (event) => {
-            const emailEvent = event.target.value;
-            const messageElement = document.getElementById('message');
-
-           
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-            if (!emailRegex.test(emailEvent)) {
-                mostrarMensagemErro(1, 'Esse e-mail não é válido');
-            } else {
-                removerMensagemErro(1);
-                email.classList.remove('inputInvalid');
-
-                if (containEmailAdvAndGov(emailEvent)) {
-                    var auxEmail = true;
-                    console.log('esse e-mail é de advogados');
-                } else {
-                   
-                }
-            }
-        });
 
         inputNome.addEventListener('input', function (event) {
             if (this.value !== '') {
