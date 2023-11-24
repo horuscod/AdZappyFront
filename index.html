@@ -83,14 +83,19 @@
                         </div>
                     </div>
                     <div class="formRow">
-                        <div class="formContentItem">
+
+                        <div id="dropdown" class="formContentItem">
                             <label for="state">
                                 Estado
                             </label>
-                            <select id="state" class="formInput">
-                                <option value="default">Selecione seu Estado</option>
-                            </select>
+                            <div id="dropdown-selected" class="formInput">Selecione seu estado</div>
+                            <div id="dropdown-options" class="dropdown-options">
+                                <div class="dropdown-option" data-value="SP">SP</div>
+                                <div class="dropdown-option" data-value="RJ">RJ</div>
+                                <div class="dropdown-option" data-value="MT">MT</div>
+                            </div>
                         </div>
+
                         <div class="formContentItem">
                             <label for="city">
                                 Cidade
@@ -722,6 +727,14 @@
             box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
             padding: 20px 10px 20px 15px;
             width: 284px !important;
+            color: #FB6A00;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+
         }
 
         select {
@@ -1462,6 +1475,15 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
+
+        .inputInvalid {
+            border: 1px solid #dc1e1e !important;
+            box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+            padding: 20px 10px 20px 15px;
+            width: 284px !important;
+            color: #dc1e1e !important;
+        }
+
         .mensagemAlert {
             color: #721c24;
             background-color: #f8d7da;
@@ -1484,6 +1506,35 @@
         option {
             margin: 5px;
         }
+
+
+
+        /* SELECT PERSONALIZADO */
+        .dropdown {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-selected {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .dropdown-options {
+            display: none;
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-option {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        .dropdown-option:hover {
+            background-color: #ddd;
+        }
     </style>
 
     <script type="text/javascript">
@@ -1499,6 +1550,22 @@
         const acceptPolicyCheckbox = document.getElementById('acceptPolicy');
 
         const newChoiseCourse = document.getElementsByClassName('offerChangeButton');
+
+
+
+        const inputNome = document.getElementById('firstName');
+        const inputTelefone = document.getElementById('phone');
+
+        document.getElementById('dropdown').addEventListener('click', function () {
+            //document.getElementById('dropdown-options').style.display = 'block';
+        });
+
+        document.querySelectorAll('.dropdown-option').forEach(item => {
+            item.addEventListener('click', function () {
+                document.getElementById('dropdown-selected').textContent = 'Estado Atual: ' + item.getAttribute('data-value');
+                document.getElementById('dropdown-options').style.display = 'none';
+            });
+        });
 
         /* Dados para trackeamento */
         let trackingData = {
@@ -1637,27 +1704,36 @@
             let isValid = true;
 
             const nome = document.getElementById('firstName').value.trim();
+
             const email = document.getElementById('email').value.trim();
+            const inputEmail = document.getElementById('email');
             const telefone = document.getElementById('phone').value.trim();
+
 
             if (nome === '') {
                 mostrarMensagemErro(0, 'Nome é um campo obrigatório');
+                inputNome.classList.add('inputInvalid');
                 isValid = false;
             } else {
                 removerMensagemErro(0);
+                inputNome.classList.remove('inputInvalid');
             }
 
             if (email === '') {
                 mostrarMensagemErro(1, 'E-mail é um campo obrigatório');
+                inputEmail.classList.add('inputInvalid');
                 isValid = false;
             } else {
+                inputEmail.classList.remove('inputInvalid');
                 removerMensagemErro(1);
             }
 
             if (telefone === '') {
                 mostrarMensagemErro(2, 'Telefone é um campo obrigatório');
+                inputTelefone.classList.add('inputInvalid');
                 isValid = false;
             } else {
+                inputTelefone.classList.remove('inputInvalid');
                 removerMensagemErro(2);
             }
 
@@ -2547,23 +2623,37 @@
             const emailEvent = event.target.value;
             const messageElement = document.getElementById('message');
 
-            if (containsInvalidKeyword(emailEvent)) {
+           
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
+            if (!emailRegex.test(emailEvent)) {
                 mostrarMensagemErro(1, 'Esse e-mail não é válido');
             } else {
-                removerMensagemErro(1)
+                removerMensagemErro(1);
+                email.classList.remove('inputInvalid');
+
                 if (containEmailAdvAndGov(emailEvent)) {
                     var auxEmail = true;
-                    console.log('esse e-mail é de advogados')
+                    console.log('esse e-mail é de advogados');
                 } else {
-
+                   
                 }
             }
-
-
         });
 
+        inputNome.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(0); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
 
+        inputTelefone.addEventListener('input', function (event) {
+            if (this.value !== '') {
+                removerMensagemErro(2); // Esta função será chamada se o campo não estiver vazio
+                this.classList.remove('inputInvalid'); // Remove a classe se o campo não estiver vazio
+            }
+        });
         /* Mascarás nos campos  */
 
         /* Telefone */
