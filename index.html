@@ -85,10 +85,58 @@
                     <div class="formRow">
 
                         <div id="dropdown" class="formContentItem">
-                            <label for="state">
-                                Estado
-                            </label>
-                            <div id="dropdown-selected" class="formInput">Selecione seu estado</div>
+                            <div class="listOptions">
+                                <label for="state">
+                                    Estado
+                                </label>
+                                <div id="dropdown-selected" class="formInput">Selecione seu estado</div>
+                                <div class="listState">
+                                    <div class="lineState" id="11">
+                                        Rondônia
+                                    </div>
+                                    <div class="lineState" id="12">
+                                        Acre
+                                    </div>
+                                    <div class="lineState" id="13">
+                                        Amazonas
+                                    </div>
+                                    <div class="lineState" id="14">
+                                        Roraima
+                                    </div>
+                                </div>
+                            </div>
+
+                            <style>
+                                .listOptions {
+                                    position: sticky;
+                                }
+
+                                .listState {
+                                    transform: none;
+                                    min-width: 300px;
+                                    max-height: 224px;
+                                    width: 311px;
+                                    box-sizing: border-box;
+                                    padding: 10px;
+                                    transition: opacity 289ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 192ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                    transform-origin: 150px 0px;
+                                    border-radius: 4px;
+                                    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+                                    overflow: hidden auto;
+                                    z-index: 1000;
+                                    background: #fff;
+                                }
+
+                                .lineState {
+                                    text-align: left;
+                                    color: #FB6A00;
+                                    font-family: Roboto;
+                                    border-bottom: #FB6A00 solid 1px;
+                                    margin: 15px 0;
+                                    padding: 0 0 10px 0;
+                                }
+                            </style>
+
                             <div id="dropdown-options" class="dropdown-options">
                                 <div class="dropdown-option" data-value="SP">SP</div>
                                 <div class="dropdown-option" data-value="RJ">RJ</div>
@@ -1931,7 +1979,7 @@
                     return true;
             }
         }
-        /* Esolheu a oferta - Proximo Passo */
+        /* Esolheu a oferta - Proximo Passo  - STEP 02 Regra de Oferta*/
         for (const btnStep of btnSteps) {
             btnStep.addEventListener('click', function () {
                 if (validarPassoAtual() && currentStep < steps.length - 1) {
@@ -2941,6 +2989,39 @@
 
 
 
+        /* Listagem de estado e cidade do html */
+
+        const jsonUrl = 'estado-cidade.json';
+        function loadStates(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    populateStates(data.states);
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar o arquivo JSON:', error);
+                });
+        }
+
+        function populateStates(states) {
+            const listStateDiv = document.querySelector('.listState');
+            listStateDiv.innerHTML = '';
+
+            for (const id in states) {
+                const stateName = states[id];
+                const stateDiv = document.createElement('div');
+                stateDiv.className = 'lineState';
+                stateDiv.id = id;
+                stateDiv.textContent = stateName;
+
+                stateDiv.addEventListener('click', function () {
+                    document.getElementById('dropdown-selected').textContent = this.textContent;
+                });
+
+                listStateDiv.appendChild(stateDiv);
+            }
+        }
+        loadStates(jsonUrl);
 
 
     </script>
