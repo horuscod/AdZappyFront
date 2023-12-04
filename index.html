@@ -1773,7 +1773,9 @@
         buttonNextStep.addEventListener('click', function () {
             if (validarPassoAtual() && currentStep < steps.length - 1) {
                 currentStep++;
-                showStep(currentStep);
+                setTimeout(function () {
+                    showStep(currentStep);
+                }, 500);
             }
         });
 
